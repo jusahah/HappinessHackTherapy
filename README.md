@@ -1,5 +1,20 @@
 # HappinessHackTherapy
 
+### Science behind this app: [http://www.behaviometrix.com/public_html/Hasson.belief.pdf](http://www.behaviometrix.com/public_html/Hasson.belief.pdf)
+
+> Gilbert and his colleagues have demonstrated that
+when people are under *cognitive load* or time pressure, they tend
+to *misremember and misrepresent false information as being true.*
+
+### Note: 
+
+I don't know whether the effect is best used in "happiness hacking". This app is work-in-progress and I have no data to prove it produces higher levels of self-satisfaction or self-esteem.
+
+(Rest of this readme is in finnish)
+
+---------
+
+
 ### Ohjeet 
 
 Tehtäväsi on etsiä tekstin joukosta numerot ja summata ne yhteen. Kirjoita saamasi summa joko näppäimistöä (desktop) tai numeropadia (mobile) käyttäen. Ohjelma kirjaa vastauksesi ylös ja siirtyy seuraavaan kysymykseen. Session päätyttyä näet tilastot.
