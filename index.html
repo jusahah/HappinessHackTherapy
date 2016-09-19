@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Flatly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./bootstrap.min.css" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    .numbutton, .numstatus {
+      width: 100px; 
+      height: 100px;
+      margin: 0px;
+      margin-left: 4px;
+      margin-bottom: 4px;
+      color: white;
+      font-size: 48px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .numbuttonnotpressed {
+      background-color: #00cc88;
+    }
+    .numbuttonpressed {
+      background-color: #00aa66;
+    }
+
+    </style>
+
+  </head>
+  <body>
+  <!--
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="../default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">Cerulean</a></li>
+                <li><a href="../cosmo/">Cosmo</a></li>
+                <li><a href="../cyborg/">Cyborg</a></li>
+                <li><a href="../darkly/">Darkly</a></li>
+                <li><a href="../flatly/">Flatly</a></li>
+                <li><a href="../journal/">Journal</a></li>
+                <li><a href="../lumen/">Lumen</a></li>
+                <li><a href="../paper/">Paper</a></li>
+                <li><a href="../readable/">Readable</a></li>
+                <li><a href="../sandstone/">Sandstone</a></li>
+                <li><a href="../simplex/">Simplex</a></li>
+                <li><a href="../slate/">Slate</a></li>
+                <li><a href="../spacelab/">Spacelab</a></li>
+                <li><a href="../superhero/">Superhero</a></li>
+                <li><a href="../united/">United</a></li>
+                <li><a href="../yeti/">Yeti</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="../help/">Help</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Blog</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Flatly <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="http://jsfiddle.net/bootswatch/jmg3gykg/">Open Sandbox</a></li>
+                <li class="divider"></li>
+                <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                <li><a href="./bootstrap.css">bootstrap.css</a></li>
+                <li class="divider"></li>
+                <li><a href="./variables.less">variables.less</a></li>
+                <li><a href="./bootswatch.less">bootswatch.less</a></li>
+                <li class="divider"></li>
+                <li><a href="./_variables.scss">_variables.scss</a></li>
+                <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+-->
+    <div class="container" style="width: 70%; margin: auto; margin-top: 48px;">
+
+
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+          <div id="selectMode">
+            <h3 style="text-align: center;" id="sessioteksti">Select device you are playing with</h3>
+            <p><strong>Ohjeet:</strong> Tehtäväsi on etsiä tekstin joukosta numerot ja summata ne yhteen. Kirjoita saamasi summa joko näppäimistöä (desktop) tai numeropadia (mobile) käyttäen. Ohjelma kirjaa vastauksesi ylös ja siirtyy seuraavaan kysymykseen. Session päätyttyä näet tilastot.</p>
+            <p><strong>Miksi pelata:</strong> Session tarkoituksena on ujuttaa alitajuntaasi ajatus siitä, että olet hieno, täydellinen ihmisyksilö. Session aikana näkemäsi kannustavat tekstit (esim. <i>"Olet ihan paras!"</i>) pörhältävät suoraan kriittiseen tarkasteluun kykenevän aivokuoresi ohi, sillä tuo ylempi portinvartija pidetään kiireisenä matemaattisten ongelmien avulla. </p><p>Periaate on sama kuin näpistyksissä; yksi vie uhrin huomion, toinen näpistää lompakon laukusta. Tässä tapauksessa matemaattiset ongelmat vievät tiedon kriittiseen tarkasteluun kykenevän aivo-osan huomion, ja kannustavat tekstit kiitävät suoraan alitajuntasi perukoille. Siellä ne alkavat kasvaa ja kukoistaa, tehden sinusta onnellisen ihmisen.</p>
+            <p>Jotta huijaus olisi täydellinen, on tärkeää, että keskityt <u>yksinomaan</u> numeroiden etsimiseen ja yhteenlaskemiseen. Sinun ei tarvitse lukea tekstiä - riittää, että silmämääräisesti skannaat tekstin joukossa lymyilevät numerot. Alitajuntasi hoitaa loput.</p>
+            <p>Kuulostaako ylläoleva naurettavalta? Niin minustakin. Sillä ei ole mitään merkitystä. Kyseessä on täysin puhdasverinen "hack" - näppärä pieni kikka, joka perustuu aivojen toiminnassa olevaan "reikään". Aivot tekevät Sinulle vastaavia temppuja harvasen päivä (kuinka monta uudenvuodenlupausta olet romuttanut hetken mielijohteesta?). Ole siis armoton ja puijaa itsesi onnelliseksi. Luit oikein - koko terapia perustuu puhtaaseen itsehuijaukseen, joka suoritetaan toiston voimalla.</p>
+            <p>Mutta onko sillä lopulta väliä <i>miten</i> tulet onnelliseksi? Terapia ei riko lakeja eikä satuta ketään. Joten miksi ei.</p>
+            <strong>Tiede taustalla</strong>
+            <p>Terapia perustuu muutamaan tieteellisesti todennettuun tosiasiaan:</p>
+            <ul>
+            <li>ylemmän aivokuoren tehtävä on filteroida sisääntulevaa informaatiota - eli erottaa tosi ja epätosi toisistaan</li>
+            <li>mitä kiireisempi ylempi aivokuori on, sitä huonommin erottelu onnistuu</li>
+            <li>alempi aivokuori (ns. alitajunta) uskoo kaiken, sillä se ei kykene kriittiseen ajatteluun</li>
+            <li>onnellisuuden tunne on peräisin alemmalta aivokuorelta, eli alitajunnasta.</li>
+            </ul>
+            <p>Kaiken lähtökohta on siis päästä ensimmäisen portinvartijan ohi. Useimmat terapiat menevät metsään jo tässä.
+            Ne yrittävät rauhallisesti ja rationaalisesti selventää potilaalle, että "hei, kaikki on hyvin". Ei auta. Sama kuin yrittäisi lentopelkoisen parantaa näyttämällä tilastoja lentoturvallisuudesta. Ei vain toimi.</p><p>Ongelma ei ole tietoisen mielen puolella, joten vetoaminen tietoiseen mieleen on ajanhaaskausta. Kyllä masentunut ihminen tietoisesti tietää, että "kaikki on hyvin" ja että "on lottovoitto asua Suomessa". Mutta silti hän on masentunut. Miksi? Koska masennus asuu alemmalla aivokuorella. Kaikki tunteet elävät alemmalla aivokuorella.</p>
+
+            <hr style="width: 40%;">
+            <button id="desktopbut" class="btn btn-primary" style="width: 100%; margin-bottom: 16px;">Desktop</button>
+            <button id="mobilebut" class="btn btn-info" style="width: 100%; margin-bottom: 16px;">Mobile</button>
+          </div>
+          <div id="playSession" style="display: none;">
+            <h3 style="text-align: center;" id="sessioteksti">Therapy in session</h3>
+            <h4 style="text-align: center;" id="timeLeftCounter">---countdown timer----</h4>
+            <div class="progress progress-striped active">
+              <div id="progresspalkki" class="progress-bar progress-bar-warning" style="width: 20%;"></div>
+              
+            </div>
+            <div id="sessionEndedNotification" class="alert alert-success" style="display: none;"><p style="text-align: center;">Session has ended. Take a deep breath. Good. Have a nice day and come back tomorrow!</p></div>
+            <hr style="width: 60%;">
+            <div id="gameArea" style="padding-top: 10px; height: 240px;">
+
+              <p style="text-align: center; font-size: 14px;" id="happytext">(sum the numbers you see)</p>
+                <div id="mobileversion" style="width: 100%;">
+                  <hr>
+                  <div id="numpad" class="hasError" style="width: 320px; padding: 0px; margin: auto; display: none;">
+                    <div data-numval="1" class="numbutton numbuttonnotpressed btn" id="num1">1</div>
+                    <div data-numval="2" class="numbutton numbuttonnotpressed btn" id="num2">2</div>
+                    <div data-numval="3" class="numbutton numbuttonnotpressed btn" id="num3">3</div>
+                    <div data-numval="4" class="numbutton numbuttonnotpressed btn" id="num4">4</div>
+                    <div data-numval="5" class="numbutton numbuttonnotpressed btn" id="num5">5</div>
+                    <div data-numval="6" class="numbutton numbuttonnotpressed btn" id="num6">6</div>
+                    <div data-numval="7" class="numbutton numbuttonnotpressed btn" id="num7">7</div>
+                    <div data-numval="8" class="numbutton numbuttonnotpressed btn" id="num8">8</div>
+                    <div data-numval="9" class="numbutton numbuttonnotpressed btn" id="num9">9</div>
+                    <div data-numval="0" class="numbutton numbuttonnotpressed btn" id="num0">0</div>
+                    <div id="mobileAnswerStatus" class="numstatus btn btn-warning" style="float: right;"></div>
+
+                  </div>
+                </div>
+              <div id="desktopversion" style="display: none;">
+                <div class="form-group" style="width: 160px; margin: auto; margin-top: 104px;">
+                
+                  <input type="text" class="form-control" id="answertosummation" style="height: 80px; text-align: center; font-size: 48px;">
+                </div>
+
+              </div>
+
+            </div>
+            <div id="statsArea" style="padding-top: 40px; text-align: center; display: none;">
+              <h1>Your session stats:</h1>
+              <p>Total answered: <span id="totalAnswered"></span></p>
+              <p>Correct: <span id="correctNum"></span></p>
+              <p>Incorrect: <span id="incorrectNum"></span></p>
+              <hr style="width: 40%;">
+              <p style="font-weight: bold;">Total points: <span id="totalPoints"></span></p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 34px;">
+            <div id="msgarea" class="sponsor" style="display: none;">
+            <p style="text-align: center;">Messages here</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="data.js"></script>
+<script src="color.js"></script>
+<script src="lodash.js"></script>
+
+<script>
+
+var mobileMode;
+
+
+
+var HappyTherapy = HappyTherapy || {};
+HappyTherapy.gameOn = true;
+HappyTherapy.currentSet = null;
+HappyTherapy.colorDecayInterval = null;
+
+HappyTherapy.currentMobileNumVal = '';
+
+HappyTherapy.answerHistory = [];
+
+HappyTherapy.nocolors = [
+  '#747E80',
+  '#2B3E42'
+];
+
+HappyTherapy.colors = [
+  '#FFC400',
+  '#FF552C',
+  '#C60037',
+  '#90003F',
+  '#067F4C',
+  '#71AC35',
+  '#116796',
+  '#101E5F',
+  '#D14A8A',
+  '#9B0A39',
+];
+
+function desktopVersion() {
+  mobileMode = false;
+  $('#selectMode').hide();
+  $('#playSession').show();
+
+  $('#desktopversion').show();
+
+  launch('happiness');
+
+}
+
+function mobileVersion() {
+  mobileMode = true;
+  $('#selectMode').hide();
+  $('#playSession').show();
+
+  $('#numpad').show();
+
+  launch('happiness');
+
+}
+
+
+function showStatsPanel() {
+  var answers = HappyTherapy.answerHistory;
+  var totalAnswered = answers.length;
+
+  var corrects = _.filter(answers, function(answer) {
+    return answer === true;
+  }).length;
+  var incorrects = totalAnswered - corrects;
+  var points = corrects - incorrects;
+
+  $('body').css('background-color', 'white');
+  $('#gameArea').hide();
+  $('#msgarea').hide();
+  var statsArea = $('#statsArea');
+
+  console.log(totalAnswered + " | " + corrects + " | " + points);
+
+  statsArea.find('#totalAnswered').empty().append(totalAnswered);
+  statsArea.find('#correctNum').empty().append(corrects);
+  statsArea.find('#incorrectNum').empty().append(incorrects);
+  statsArea.find('#totalPoints').empty().append(points);
+  statsArea.show();
+
+  $('#sessionEndedNotification').show();
+
+}
+
+
+function noMoreTherapy() {
+  console.log("Therapy over!");
+  HappyTherapy.gameOn = false;
+  var palkki = $('#progresspalkki');
+  palkki.css('width', '100%');
+  palkki.removeClass('progress-bar-warning');
+  palkki.addClass('progress-bar-success');
+  palkki.closest('.progress').removeClass('active');
+  $('#timeLeftCounter').empty().append('Thank you.');
+  $('#sessioteksti').empty().append('Therapy session over');
+
+  showStatsPanel();
+}
+
+function launch(selectedSet, secsToPlay) {
+  _.each([], function() {});
+
+  HappyTherapy.secsToPlay = secsToPlay || 300;
+  if (!HappyTherapy.dataSets.hasOwnProperty(selectedSet)) {
+    console.log("Warning - data set not found -> using default set!");
+    //alert('Error finding dataset. Using default happiness set!');
+    selectedSet = 'trump';
+  }
+  HappyTherapy.currentSet = HappyTherapy.dataSets[selectedSet];
+  console.log(HappyTherapy.currentSet);
+
+  var interval = setInterval(function() {
+    var now = Date.now();
+    var duration = Math.round((now - HappyTherapy.startedAt) / 1000);
+    var left = HappyTherapy.secsToPlay - duration;
+
+    if (left <= 0) {
+      clearInterval(interval); // Clear oneself out
+      return noMoreTherapy();
+    }
+
+    var palkki = $('#progresspalkki');
+    var palkkiPercent = Math.floor(100*(duration/HappyTherapy.secsToPlay));
+    console.log(HappyTherapy.secsToPlay + ", " + duration + ", " + left);
+    console.log(palkkiPercent);
+    palkki.css('width', palkkiPercent + '%');
+    $('#timeLeftCounter').empty().append(timeStringify(left));
+
+
+
+  }, 1000);
+
+  HappyTherapy.startedAt = Date.now();
+  nextHappy();
+
+}
+
+function timeStringify(left) {
+  var mins = Math.floor(left / 60);
+  if (mins === 0) return left + ' seconds';
+  var secs = left % 60;
+  return mins + ' minutes ' + secs + ' seconds';
+}
+
+function nextHappy() {
+  if (!HappyTherapy.gameOn) return;
+  var qObj = HappyTherapy.currentSet[Math.floor(HappyTherapy.currentSet.length*Math.random())];
+  console.log(qObj);
+  var q = qObj.text;
+  var isGood = qObj.good;
+  q = addNumbers(q, isGood);
+  //q = numProcessing(q);
+  var htmlAndColor = colorProcessing(q, isGood);
+  var html = htmlAndColor.html;
+  var tinyColorBase = tinycolor(htmlAndColor.basecolor);
+  var bgColor       = tinyColorBase.complement().spin(Math.random()*50).saturate(50).brighten(30);
+  $('body').css('background-color', bgColor.toHexString());
+
+  $('#happytext').empty().append(html);
+  $('#answertosummation').focus();
+
+  var decayRate = 1;
+  var timesDecayed = 0;
+  //isGood = false; // For now
+  HappyTherapy.colorDecayInterval = setInterval(function() {
+    if (timesDecayed > 60) return;
+    /*
+    if (isGood) {
+      tinyColorBase.spin(Math.random() < 0.6 ? 1 : 2);
+      tinyColorBase.saturate(1);
+    }*/
+
+    if (isGood) {
+      if (bgColor.isDark()) {
+        tinyColorBase.lighten(Math.random() < 0.33 ? 1 : 0);
+      }
+       else tinyColorBase.darken(Math.random() < 0.25 ? 1 : 0);
+    }
+    else tinyColorBase.desaturate(1);
+    $('#happytext').find('.numval').css('color', tinyColorBase.toString());
+    timesDecayed++;
+  }, 50);
+
+}
+
+function addNumbers(q, isGood) {
+  var numOfNumbers = 3;
+
+  var strLen = q.length;
+  if (strLen <= 6) throw "Too short string to function 'addNumbers': " + q;
+  if (strLen < 12) {
+    numOfNumbers = 2;
+  }
+
+  while (numOfNumbers > 0) {
+    strLen = q.length;
+    var idx = Math.floor(Math.random()*strLen) + 1;
+    // check index good
+    if (idx >= strLen-1) continue; // Next round
+    if (!isNaN(parseInt(q.charAt(idx-1))) || !isNaN(parseInt(q.charAt(idx))) || !isNaN(parseInt(q.charAt(idx+1)))) {
+      // Number next to this one -> can not add here
+      continue;
+    }
+
+    var num;
+    if (isGood) {
+      console.log("GOOD");
+
+
+      if (Math.random() < 0.65) {
+        num = 1;
+      } else {
+        num = Math.random() < 0.5 ? 3 : 5;
+      }
+      // Override trump-style num selection of above for now
+      num = Math.round(Math.random()*8) + 1;
+      
+    } else {
+      console.log("BAD");
+      num = 2 + Math.floor(Math.random() * 4);
+      console.log(num);
+    } 
+    
+    q = q.slice(0, idx) + num + q.slice(idx);
+    numOfNumbers--;
+
+  }
+
+  return q;
+
+}
+
+function numProcessing(q) {
+  var strLen = q.length;
+  var resString = '';
+
+  var randomIntegerBetween = [1,3];
+
+  for (var i = 0; i < strLen; i++) {
+    var char = q.charAt(i);
+    var n = parseInt(char);
+    if (!isNaN(n)) {
+      var r = randomIntegerBetween[0] + Math.floor(Math.random()*randomIntegerBetween[1]);
+      resString += r;
+    } else {
+      resString += char;
+    }
+  };  
+
+  return resString; 
+}
+
+function colorProcessing(q, isGood) {
+  var htmlString = "";
+  var color = HappyTherapy.colors[Math.floor(Math.random()*HappyTherapy.colors.length)];
+  var numColor = HappyTherapy.nocolors[0];
+
+  var fontSize = mobileMode ? '38px' : '68px';
+
+  if (!isGood) {
+    console.log("BAD COLOR");
+    color = tinycolor(color).lighten(20).desaturate(20).toString();
+    //fontSize = "68px";
+  }
+
+  var strLen = q.length;
+  for (var i = 0; i < strLen; i++) {
+    var char = q.charAt(i);
+
+    var n = parseInt(char);
+    if (!isNaN(n)) {
+      htmlString += "<span style='color: " + color + "; font-size: " + fontSize + ";' class='numval'>" + char + "</span>";
+    } else {
+      htmlString += "<span style='color: " + color + "; font-size: " + fontSize + ";' class='charval'>" + char + "</span>";
+    }
+  }; 
+
+  // string is now reversed so we need to fix that
+
+  return {html: htmlString, basecolor: color};
+}
+
+function answerGiven(wasCorrect) {
+  if (HappyTherapy.colorDecayInterval) {
+    clearInterval(HappyTherapy.colorDecayInterval);
+    HappyTherapy.colorDecayInterval = null;
+  }
+
+  if (!wasCorrect) {
+    saveAnswer(false, Date.now());
+    $('#answertosummation').closest('.form-group').removeClass('has-success').addClass('has-error');
+  } else {
+    saveAnswer(true, Date.now());
+    $('#answertosummation').closest('.form-group').removeClass('has-error').addClass('has-success');
+  }
+  nextHappy();
+}
+
+function submitAnswer() {
+
+  var ans = $('#answertosummation').val();
+  $('#answertosummation').val('');
+  answerGiven(gradeAnswer($('#happytext').text(), ans));
+  
+}
+
+function saveAnswer(isCorrect, answerMoment) {
+
+  HappyTherapy.answerHistory.push(isCorrect);
+
+  var l = HappyTherapy.answerHistory.length;
+  console.log(HappyTherapy.answerHistory);
+
+  if (l < 6) return;
+
+  var fiveCorrectInRow = true;
+  var fiveWrongInRow = true;
+
+  for (var i = l - 1; i >= l-5; i--) {
+    if (HappyTherapy.answerHistory[i]) {
+      fiveWrongInRow = false;
+    } else {
+      fiveCorrectInRow = false;
+    }
+
+  };
+
+
+
+  if (fiveCorrectInRow) {
+    console.log('5 correct!');
+    if (HappyTherapy.answerHistory[l-6] === false) {
+      // Show congrats msg
+      $('#msgarea').empty().append('<div class="alert alert-success" style="text-align: center;"><strong>Wow! Five correct in a row! It is like you are Mr. Trump himself!</strong></div>');
+      setTimeout(function() {
+        $('#msgarea').empty();
+      }, 4500);
+
+    }
+  }
+
+  if (fiveWrongInRow) {
+    console.log('5 wrong');
+    if (HappyTherapy.answerHistory[l-6] === true) {
+      // Show fucked up msg
+      $('#msgarea').empty().append('<div class="alert alert-danger" style="text-align: center;">Five wrong in a row. But you are not Ted Cruz. You still have hope.</div>');
+      setTimeout(function() {
+        $('#msgarea').empty();
+      }, 4500);
+    }
+  }
+
+
+
+}
+
+function checkMobileNumValAgainstAnswer(numvalAsInt) {
+  var text = $('#happytext').text();
+  var correctAnswer = getAnswerFromText(text);
+
+  if (numvalAsInt === correctAnswer) return 1;
+
+  if (correctAnswer >= 10 && numvalAsInt < 10) {
+    return 2;
+  }
+  return 0;
+
+}
+
+function resetMobileButtons(wasCorrect) {
+  console.log("RESET MOBILE: " + wasCorrect);
+  $('#mobileAnswerStatus').removeClass('btn-warning btn-danger btn-success');
+  if (wasCorrect) $('#mobileAnswerStatus').addClass('btn-success');
+  else $('#mobileAnswerStatus').addClass('btn-danger');
+  $('.numbutton').removeClass('numbuttonpressed').addClass('numbuttonnotpressed');
+}
+
+function numValFromMobilePad(numval) {
+
+  HappyTherapy.currentMobileNumVal += "" + numval;
+  var numvalAsInt = parseInt(HappyTherapy.currentMobileNumVal);
+
+  var outcome = checkMobileNumValAgainstAnswer(numvalAsInt);
+  // outcome = 0 -> wrong, outcome = 1 -> correct, outcome = 2 -> waiting for more input
+
+  if (outcome === 0) {
+    answerGiven(false);
+    HappyTherapy.currentMobileNumVal = '';
+    resetMobileButtons(false);
+  } else if (outcome === 1) {
+    answerGiven(true);
+    HappyTherapy.currentMobileNumVal = '';
+    resetMobileButtons(true);
+  } else if (outcome === 2) {
+    console.log("Waiting for more input");
+  }
+
+}
+
+function getAnswerFromText(q) {
+  var strLen = q.length;
+  var sum = 0;
+  for (var i = strLen - 1; i >= 0; i--) {
+    var char = q.charAt(i);
+    var n = parseInt(char);
+    if (!isNaN(n)) {
+      sum += n;
+    }
+  }; 
+
+  return sum; 
+
+}
+
+function gradeAnswer(q, ans) {
+  console.log("Q is " + q);
+  var strLen = q.length;
+  var sum = 0;
+  for (var i = strLen - 1; i >= 0; i--) {
+    var char = q.charAt(i);
+    var n = parseInt(char);
+    if (!isNaN(n)) {
+      sum += n;
+    }
+  };
+
+  console.log("Sum is " + sum);
+
+  return parseInt(ans) === sum;
+}
+
+$(function() {
+
+
+  $('body').on('keypress', function(e) {
+    if (e.keyCode === 13) {
+      submitAnswer();
+      //nextHappy();
+    }
+
+  });
+
+  $('.numbutton').on('click', function(e) {
+    console.log("CLICKED NUM BUTTON");
+    $(e.target).removeClass('numbuttonnotpressed').addClass('numbuttonpressed');
+    var numval = $(e.target).data('numval');
+    numValFromMobilePad(numval);
+  });
+
+  $('#desktopbut').on('click', desktopVersion);
+  $('#mobilebut').on('click', mobileVersion);
+
+
+
+
+  
+
+
+
+});
+
+</script>
+ 
+
+</body>
+</html>
